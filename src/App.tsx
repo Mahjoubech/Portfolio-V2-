@@ -4,6 +4,7 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 import SocialIcon from './components/ui/SocialIcon'
+import Book from './components/layouts/Book'
 const socials = [
   { icon: "bx bxl-facebook", href: "#" },
   { icon: "bx bxl-twitter", href: "#" },
@@ -13,20 +14,7 @@ const socials = [
 function App() {
   const [count, setCount] = useState(0)
 
-  return (
-    <>
-       
-       <div className="mt-5 text-black flex items-center justify-center gap-3">
-          {socials.map((social, index) => (
-            <SocialIcon
-              key={index}
-              icon={social.icon}
-              href={social.href}
-            />
-          ))}
-        </div>
-    </>
-  )
+  return <Book />
 }
 
 export default App
